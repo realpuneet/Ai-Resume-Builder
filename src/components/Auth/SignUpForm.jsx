@@ -12,8 +12,7 @@ const SignUpForm = () => {
 
     const onSubmit = (data) => {
         localStorage.setItem("user", JSON.stringify(data));
-        console.log("User registered successfully:", data);
-        
+        toast.success("User registered successfully");
         navigate("/signin");
     }
 

@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
- const [isAuth, setIsAuth] = useState(() => {
+  const [isAuth, setIsAuth] = useState(() => {
     // Initial value from localStorage
     return localStorage.getItem("isAuth") === "true";
   });
@@ -20,8 +20,6 @@ export const AuthProvider = ({ children }) => {
   const login = () => {
     localStorage.setItem("isAuth", "true");
     setIsAuth(true);
-    console.log("User logged in successfully auth");
-    
   };
 
   const logout = () => {

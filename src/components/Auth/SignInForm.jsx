@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { Link } from "react-router";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 
 const SignInForm = () => {
   const {
@@ -19,7 +20,8 @@ const SignInForm = () => {
         localStorage.setItem("isAuth", "true");
         login();
         navigate("/dashboard");
-        console.log("User signed in successfully:", data);
+        toast.success("User signed in successfully");
+        // console.log("User signed in successfully:", data);
     }
     else {
         alert("Invalid credentials");

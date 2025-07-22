@@ -1,9 +1,34 @@
-import React from 'react'
+import Navbar from "../components/Common/Navbar";
+import { useNavigate } from "react-router";
+import { useAuth } from "../context/AuthContext";
 
-const Landing = () => {
+function Landing() {
+  const navigate = useNavigate();
+  const { isAuth } = useAuth();
+
+  const handleGetStarted = () => {
+    if (isAuth) {
+      navigate("/resume-builder");
+    } else {
+      navigate("/signin");
+    }
+  };
+
   return (
-    <div>Landing</div>
-  )
+    <>
+      {/* <Navbar /> */}
+      <div className="min-h-[90vh] flex flex-col justify-center items-center">
+        <h1 className="text-4xl font-bold mb-4">Build Your Resume with AI</h1>
+        <p className="text-gray-600 mb-6">Create, edit and download stunning resumes in minutes.</p>
+        <button
+          onClick={handleGetStarted}
+          className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Get Started
+        </button>
+      </div>
+    </>
+  );
 }
 
-export default Landing
+export default Landing;
