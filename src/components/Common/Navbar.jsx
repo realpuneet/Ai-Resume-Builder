@@ -28,8 +28,7 @@ const Navbar = () => {
   const navLinksPrivate = [
     { label: "Dashboard", path: "/dashboard" },
     { label: "Resume Builder", path: "/dashboard/resume-builder" },
-    { label: "Live Preview", path: "/dashboard/live-preview" },
-    { label: "Update Resume", path: "/dashboard/update-resume" },
+    { label: "Templates", path: "/templates" },
     { label: "Profile", path: "/dashboard/profile" },
   ];
 

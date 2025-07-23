@@ -4,6 +4,8 @@ import { MdDashboard } from "react-icons/md";
 import { FaFileSignature } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
+import { FaHome } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -55,7 +57,7 @@ const Sidebar = () => {
   return (
     <div className="w-14 items-center h-full bg-gray-900 text-white flex flex-col">
       <nav className="flex h-[100vh] flex-col gap-6 p-4 items-center">
-        <NavItem to="/dashboard" icon={MdDashboard} label="Dashboard" />
+        <NavItem to="/" icon={FaHome} label="Home" />
         <NavItem to="/dashboard/resume-builder" icon={FaFileSignature} label="Resume Builder" />
         <NavItem to="/dashboard/profile" icon={FaUser} label="Profile" />
 

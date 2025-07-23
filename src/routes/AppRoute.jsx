@@ -10,13 +10,16 @@ import ResumeBuilder from "../pages/ResumeBuilder";
 import LivePreview from "../pages/LivePreview";
 import UpdateResume from "../pages/UpdateResume";
 import Profile from "../pages/Profile";
+import Templates from "../pages/Templates";
+import Pricing from "../pages/Pricing";
 
 const AppRoute = () => {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/features" element={<Features />} />
-
+      <Route path="/templates" element={<Templates />} />
+      <Route path="/pricing" element={<Pricing />} />
       {/* Public routes */}
       <Route element={<PublicRoute />}>
         <Route path="/signin" element={<SignIn />} />
