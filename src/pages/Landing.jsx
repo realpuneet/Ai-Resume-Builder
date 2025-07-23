@@ -1,7 +1,7 @@
-import Navbar from "../components/Common/Navbar";
 import { useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext";
 import Features from "./Features";
+
 
 function Landing() {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ function Landing() {
 
   const handleGetStarted = () => {
     if (isAuth) {
-      navigate("/resume-builder");
+      navigate("/dashboard/resume-builder");
     } else {
       navigate("/signin");
     }

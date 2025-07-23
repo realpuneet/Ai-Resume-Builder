@@ -1,30 +1,39 @@
-import {Routes, Route} from "react-router";
-import Landing from "../pages/Landing"
+import { Routes, Route } from "react-router";
+import Landing from "../pages/Landing";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
 import Dashboard from "../pages/Dashboard";
 import ProtectedRoute from "../components/Common/ProtectedRoute";
 import PublicRoute from "../components/Common/PublicRoute";
 import Features from "../pages/Features";
+import ResumeBuilder from "../pages/ResumeBuilder";
+import LivePreview from "../pages/LivePreview";
+import UpdateResume from "../pages/UpdateResume";
+import Profile from "../pages/Profile";
 
 const AppRoute = () => {
   return (
     <Routes>
-      {/* Define your routes here */}
       <Route path="/" element={<Landing />} />
       <Route path="/features" element={<Features />} />
-      
+
+      {/* Public routes */}
       <Route element={<PublicRoute />}>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
       </Route>
 
+      {/* Protected & Nested Dashboard routes */}
       <Route element={<ProtectedRoute />}>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="resume-builder" element={<ResumeBuilder />} />
+          <Route path="live-preview" element={<LivePreview />} />
+          <Route path="update-resume" element={<UpdateResume />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
       </Route>
-
     </Routes>
-  )
-}
+  );
+};
 
-export default AppRoute
+export default AppRoute;
