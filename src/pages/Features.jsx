@@ -1,6 +1,7 @@
 // src/pages/Features.jsx
 import { FaLightbulb, FaFilePdf, FaEye, FaRobot } from "react-icons/fa";
 import FeatureCard from "../components/Common/FeatureCard";
+import Footer from "../components/Common/Footer";
 
 const features = [
   {
@@ -30,6 +31,7 @@ const features = [
 ];
 const Features = () => {
   return (
+    <>
     <div className="min-h-screen  py-20 px-4">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-black mb-6">
@@ -45,6 +47,9 @@ const Features = () => {
         </div>
       </div>
     </div>
+    
+      <Footer />
+    </>
   );
 };
 

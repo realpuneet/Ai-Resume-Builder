@@ -1,11 +1,11 @@
 import { useAuth } from "../../context/AuthContext";
 import { NavLink, useNavigate } from "react-router";
-import { MdDashboard } from "react-icons/md";
 import { FaFileSignature } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
 
+import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { useState } from "react";
 

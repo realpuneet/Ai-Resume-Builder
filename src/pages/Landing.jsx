@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { useAuth } from "../context/AuthContext";
 import Features from "./Features";
+import Footer from "../components/Common/Footer";
 
 
 function Landing() {
@@ -31,6 +32,7 @@ function Landing() {
         </button>
       </div>
       <Features />
+      <Footer /> 
     </>
   );
 }

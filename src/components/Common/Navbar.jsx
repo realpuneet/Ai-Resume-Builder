@@ -40,7 +40,19 @@ const Navbar = () => {
       className="bg-white dark:bg-gray-900 shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50"
     >
       <Link to="/" className="text-2xl font-bold text-blue-600">
-        ResumeX
+       <svg width="200" height="40" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="textGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA" /> 
+      <stop offset="100%" stop-color="#A78BFA" /> 
+    </linearGradient>
+  </defs>
+  <text x="10" y="40" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700" fill="url(#textGradient)">
+    NextHire
+  </text>
+  <circle cx="170" cy="20" r="6" fill="#10B981"/> </svg>
+
+
       </Link>
 
       <div className="hidden md:flex gap-6 items-center">
@@ -48,7 +60,7 @@ const Navbar = () => {
           <Link
             key={link.label}
             to={link.path}
-            className="text-gray-700 dark:text-white hover:text-blue-600 transition duration-200"
+            className="text-gray-700 dark:text-white hover:text-yellow-600 transition duration-200"
           >
             {link.label}
           </Link>
@@ -57,7 +69,7 @@ const Navbar = () => {
         {isAuth && (
           <button
             onClick={logout}
-            className="px-4 py-2 rounded-md bg-red-500 text-white hover:bg-red-600 transition"
+            className="px-4 py-1 rounded-md bg-red-500 text-white hover:bg-red-600 transition"
           >
             Logout
           </button>
