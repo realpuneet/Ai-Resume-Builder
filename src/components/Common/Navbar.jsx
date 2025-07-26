@@ -43,11 +43,11 @@ const Navbar = () => {
        <svg width="200" height="40" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="textGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#60A5FA" /> 
+      {/* <stop offset="0%" stop-color="#60A5FA" />  */}
       <stop offset="100%" stop-color="#A78BFA" /> 
     </linearGradient>
   </defs>
-  <text x="10" y="40" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700" fill="url(#textGradient)">
+  <text x="10" y="40" fontFamily="Arial" font-size="30" font-weight="700" fill="url(#textGradient)">
     NextHire
   </text>
   <circle cx="170" cy="20" r="6" fill="#10B981"/> </svg>

@@ -7,7 +7,7 @@ import ProtectedRoute from "../components/Common/ProtectedRoute";
 import PublicRoute from "../components/Common/PublicRoute";
 import Features from "../pages/Features";
 import ResumeBuilder from "../pages/ResumeBuilder";
-import LivePreview from "../pages/LivePreview";
+import LivePreview from "../components/Resume/LivePreview";
 import UpdateResume from "../pages/UpdateResume";
 import Profile from "../pages/Profile";
 import Templates from "../pages/Templates";

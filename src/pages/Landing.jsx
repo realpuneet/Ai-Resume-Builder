@@ -19,7 +19,7 @@ function Landing() {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="min-h-[80vh] flex flex-col justify-center items-center">
+      <div className="min-h-[80vh] text-center flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold mb-4">Build Your Resume with AI</h1>
         <p className="text-gray-600 mb-6">
           Create, edit and download stunning resumes in minutes.
@@ -32,7 +32,7 @@ function Landing() {
         </button>
       </div>
       <Features />
-      <Footer /> 
+      {/* <Footer />  */}
     </>
   );
 }
